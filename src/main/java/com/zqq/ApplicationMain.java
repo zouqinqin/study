@@ -15,7 +15,6 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  */
 @SpringBootApplication
 @MapperScan("com.zqq.logRecord.mapper")
-//@ServletComponentScan("com.zqq.logRecord.filter")
 public class ApplicationMain {
 
     public static void main(String[] args) {
