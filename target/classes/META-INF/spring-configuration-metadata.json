@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "jwt.data",
+      "type": "com.zqq.logRecord.utils.JWTUtils",
+      "sourceType": "com.zqq.logRecord.utils.JWTUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.data.header",
+      "type": "java.lang.String",
+      "sourceType": "com.zqq.logRecord.utils.JWTUtils"
+    },
+    {
+      "name": "jwt.data.s-e-c-r-e-t",
+      "type": "java.lang.String",
+      "sourceType": "com.zqq.logRecord.utils.JWTUtils"
+    }
+  ],
+  "hints": []
+}

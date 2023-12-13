@@ -1,0 +1,88 @@
+eureka:
+  client:
+    serviceUrl:
+      #      defaultZone: http://172.17.2.51:30960/eureka
+      defaultZone: http://10.51.34.198:8500/eureka/
+      #defaultZone: http://localhost:8760/eureka
+
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    ip-address: ${spring.cloud.client.ip-address}
+    hostname: ${spring.cloud.client.ip-address}
+spring:
+  datasource:
+    dirver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.51.34.143:4000/test_zqq?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: user
+    password: user@123
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 172.17.1.177
+    port: 6379
+    password:
+#aes:
+#  secretKey: tlYIFoKWxGMO9PM3AVfheQ==
+#jwt: data :这个路径是根据JWTUtil中的
+#@ConfigurationProperties("jwt.data")配置的
+jwt:
+  data:
+    #    jwt加密密钥
+    SECRET: jwt-token-secret
+    #    jwt储存的请求头Authorization固定写法
+    tokenHeader: Authorization
+    #      jwt的过期时间(60s*60min*24h*7day)
+    expiration: 604800
+    #    jwt负载中拿到的头信息
+    tokenHead: Bearer
+
+
+
+
+#bsgoal:
+#  accessCode: 50202212-84f0-11e8-8d22-00163e0c01c9
+#  signType: SHA1
+#  companyId: 5713831726460572114
+#  host: http://csykt.bsgoal.net.cn:8086/APPAPI/OISParkingV2
+#  appSecret: 50402239-84f0-11e8-8d22-00163e0c01c9
+## xxl-job 配置
+#xxl:
+#  job:
+#    admin:
+#      addresses: http://172.17.1.177:8096/xxl-job-admin
+#    accessToken: 30
+#    executor:
+#      appname: cent-vehicle-executor
+#      address:
+#      ip:
+#      port: 9061
+#      logpath:
+#      logretentiondays: 30
+
+#obs:
+#  client: minio
+#  #  huawei:
+#  #    ak: JIX00JKTDINL6MNBXRVT
+#  #    sk: BG8kmRo6h4rDQ5zepEO7XqgUhlY0RUmy0Ca180w3
+#  #    endpoint: obs.cn-south-1.myhuaweicloud.com
+#  #    bucketName: isc-image
+#  minio:
+#    endpoint: https://cent.xymind.net:19000
+#    accessKey: admin
+#    secretKey: admin123
+#    bucketName: "bucket-test"
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-enums-package: com.xhwl.majordomo.enums.*
+  global-config:
+    banner: false
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 600000
+  SocketTimeout: 600000
+  ConnectTimeout: 1200000

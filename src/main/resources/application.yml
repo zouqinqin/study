@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: student
+  profiles:
+    active: dev
+  jackson:
+    date-format: MM/dd/YYYY HH:mm:ss
+    time-zone: GMT+8
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8001
+
+#logging:
+#  config: classpath:log4j2.xml
+#  level:
+#    io.swagger.models.parameters.AbstractSerializableParameter: error
+#    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+app:
+  id: student
+#apollo:
+#  cacheDir: ./config/cache
+#  cluster: default
+#  meta: http://${apollo.ip.port}
+#  autoUpdateInjectedSpringProperties: true
+#  bootstrap:
+#    enable: true
+#    namespaces: application
+#    eagerLoad:
+#      enabled: false
+feign:
+  httpclient:
+    connection-timeout: 5000
+  client:
+    config:
+      default:
+        #连接到目标的时间
+        connectTimeout: 5000
+        #获取目标连接后执行的最长时间
+        readTimeout: 5000

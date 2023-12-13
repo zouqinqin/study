@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="本地" uuid="990d8865-37d4-4c34-b03e-504bd04e3aa7">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="standard_authcenter@172.19.21.24" uuid="5eaf1755-176d-4515-862c-dcd4a4d78b19">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.19.21.24:3107/standard_authcenter?useSSL=false&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="useSSL" value="FALSE" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="nts_auth_center@172.19.21.24" uuid="7656a0ff-b7f2-412a-bb47-2691105629b6">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.19.21.24:3107/nts_auth_center?serverTimezone=GMT&amp;useSSL=false&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="useSSL" value="FALSE" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="qinqin@81.68.140.85" uuid="d69b3535-297a-4136-8d41-49f2d79385be">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://81.68.140.85:3106/qinqin?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
